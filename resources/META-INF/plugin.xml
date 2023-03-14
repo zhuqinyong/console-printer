@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>ConsolePrinter</id>
+    <name>ConsolePrinter</name>
+    <version>1.0</version>
+    <vendor email="support@console.printer.com" url="http://www.console.printer.com">console.printer</vendor>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow factoryClass="console.printer.ConsolePrinterToolWindow" id="ConsolePrinter" order="first" canCloseContents="false" anchor="bottom"
+                    secondary="true"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="MyTestAction" class="console.printer.CMyTestAction" text="测试Action">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
