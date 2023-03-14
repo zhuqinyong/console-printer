@@ -19,7 +19,7 @@
 
     <actions>
         <!-- Add your actions here -->
-        <action id="MyTestAction" class="console.printer.CMyTestAction" text="测试Action">
+        <action id="MyTestAction" class="console.printer.CMyTestAction" text="Console Printer">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
     </actions>

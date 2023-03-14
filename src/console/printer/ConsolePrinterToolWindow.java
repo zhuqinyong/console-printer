@@ -17,7 +17,7 @@ public class ConsolePrinterToolWindow implements ToolWindowFactory {
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         ContentManager contentManager = toolWindow.getContentManager();
         myConsoleView = TextConsoleBuilderFactory.getInstance().createBuilder(project).getConsole();
-        Content content = contentManager.getFactory().createContent(myConsoleView.getComponent(), "控制台输出", true);
+        Content content = contentManager.getFactory().createContent(myConsoleView.getComponent(), "MyConsole", true);
         contentManager.addContent(content, 0);
         toolWindow.show(new Runnable() {
             @Override
